@@ -1,0 +1,8 @@
+<p-chips [(ngModel)]="contactnames" name="basic"></p-chips>
+
+
+<p-chips [(ngModel)]="complexcontacts" name="template">
+  <ng-template let-item pTemplate="item">
+    <i class="fa fa-address-card"></i>-{{item}}
+  </ng-template>
+</p-chips>

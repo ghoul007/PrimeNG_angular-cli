@@ -12,9 +12,12 @@ import { AutoCompleteModule } from "primeng/primeng";
 import { FormsModule } from "@angular/forms";
 import { CountriesService } from "./countries.service";
 import Country from "./country";
+import { ShipsComponent } from './input/ships/ships.component';
+import {ChipsModule} from 'primeng/primeng';
+
 
 @NgModule({
-  declarations: [AppComponent, MaskComponent, AutoCompleteComponent],
+  declarations: [AppComponent, MaskComponent, AutoCompleteComponent, ShipsComponent],
   imports: [
     BrowserAnimationsModule,
     HttpModule,
@@ -24,7 +27,8 @@ import Country from "./country";
     DataTableModule,
     SharedModule,
     InputMaskModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    ChipsModule
   ],
   providers: [CountriesService],
   bootstrap: [AppComponent]
