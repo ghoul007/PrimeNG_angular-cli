@@ -1,0 +1,6 @@
+.template-border {
+  display: flex;
+}
+.template-border img {
+  width: 40px !important;
+}

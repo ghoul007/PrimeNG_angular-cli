@@ -14,6 +14,9 @@ export class AutoCompleteComponent implements OnInit {
   listCountries: any = [];
   filteredCountries: any = [];
   filteredCountryInstances: any = [];
+  filteredCustomCountries: any = [];
+
+
   constructor(private _countries: CountriesService) {}
 
   ngOnInit() {
@@ -32,8 +35,15 @@ export class AutoCompleteComponent implements OnInit {
 
   filterCountryInstances(event: any) {
     let query = event.query;
-    this._countries.getCountries().subscribe((countries: Country[]) => {
+    this._countries.getCountries().subscribe((countries: any) => {
         this.filteredCountryInstances = this.filterCountry(query, countries);
+    });
+}
+
+  filterCustomCountries(event: any) {
+    let query = event.query;
+    this._countries.getCountries().subscribe((countries: any) => {
+        this.filteredCustomCountries = this.filterCountry(query, countries);
     });
 }
 
