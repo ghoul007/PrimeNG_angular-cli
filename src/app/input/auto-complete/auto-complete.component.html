@@ -16,8 +16,6 @@ placeholder="Type your favourite Country" [minLength]="1"  [multiple]="true">
 [suggestions]="filteredCountryInstances"
 (completeMethod)="filterCountryInstances($event)" field="dial_code">
 </p-autoComplete>
-<!-- {{countries|json}} -->
-
 
 <p-autoComplete [(ngModel)]="customCountry" name="template"
 [suggestions]="filteredCustomCountries"
