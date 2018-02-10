@@ -1,0 +1,20 @@
+<p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name"
+[styleClass]="dropdown-width" placeholder="Select a Country">
+</p-dropdown>
+
+
+
+<p-dropdown [options]="countries" [(ngModel)]="selectedCountry"
+[styleClass]="dropdown-width"  >
+<ng-template let-country pTemplate="item">
+  <div class="ui-helper-clearfix" class="template-border">
+    <img src="assets/data/images/country/{{country.code.toLowerCase()}}.png" class="country-image"/>
+    <div class="country-text">{{country.name}}</div>
+  </div>
+</ng-template>
+</p-dropdown>
+
+<br>
+
+<p-multiSelect [options]="countries" [(ngModel)]="selectedCountries" optionLabel="name">
+</p-multiSelect>

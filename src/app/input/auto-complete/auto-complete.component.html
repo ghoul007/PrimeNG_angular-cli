@@ -20,7 +20,7 @@ placeholder="Type your favourite Country" [minLength]="1"  [multiple]="true">
 
 
 <p-autoComplete [(ngModel)]="customCountry" name="template"
-[suggestions]="filteredCustomCountries"
+[suggestions]="filteredCustomCountries" [multiple]="true"
 field="name" (completeMethod)="filterCustomCountries($event)"
 [size]="30"  [minLength]="1" placeholder="Start your search">
 <ng-template let-country pTemplate="item">

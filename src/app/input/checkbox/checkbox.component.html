@@ -1,0 +1,8 @@
+<p-checkbox name="single" [(ngModel)]="checked" binary="true">
+</p-checkbox>
+
+
+<p-triStateCheckbox name="tristate" [(ngModel)]="status"    (onChange)="onChangeTristate()">
+</p-triStateCheckbox>
+
+<p-growl [value]="msgs"></p-growl>

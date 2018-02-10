@@ -2,7 +2,7 @@ import { HttpModule } from "@angular/http";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { ButtonModule } from "primeng/primeng";
+import {DropdownModule, TriStateCheckboxModule,  CheckboxModule,   ButtonModule,  GrowlModule, MultiSelectModule} from 'primeng/primeng';
 import { MenubarModule } from "primeng/primeng";
 import { DataTableModule, SharedModule } from "primeng/primeng";
 import { MaskComponent } from "./input/mask/mask.component";
@@ -14,10 +14,11 @@ import { CountriesService } from "./countries.service";
 import Country from "./country";
 import { ShipsComponent } from './input/ships/ships.component';
 import {ChipsModule} from 'primeng/primeng';
-
+import { CheckboxComponent } from './input/checkbox/checkbox.component';
+import { DropdownComponent } from './input/dropdown/dropdown.component';
 
 @NgModule({
-  declarations: [AppComponent, MaskComponent, AutoCompleteComponent, ShipsComponent],
+  declarations: [AppComponent, MaskComponent, AutoCompleteComponent, ShipsComponent, CheckboxComponent, DropdownComponent],
   imports: [
     BrowserAnimationsModule,
     HttpModule,
@@ -28,7 +29,12 @@ import {ChipsModule} from 'primeng/primeng';
     SharedModule,
     InputMaskModule,
     AutoCompleteModule,
-    ChipsModule
+    ChipsModule,
+    CheckboxModule,
+    TriStateCheckboxModule,
+    GrowlModule,
+    DropdownModule,
+    MultiSelectModule
   ],
   providers: [CountriesService],
   bootstrap: [AppComponent]
